@@ -1,0 +1,35 @@
+.spacer {
+    flex: 1;
+  }
+ 
+.toolbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    background-color: #390539;
+    color: white;
+    font-weight: 600;
+  }
+
+.toolbar img {
+    margin: 0 16px;
+  }
+
+.toolbar #linkedin-logo {
+    height: 40px;
+    margin: 0 8px;
+  }
+
+.toolbar #github-logo {
+    height: 40px;
+    margin: 0 16px;
+  }
+
+.toolbar #linkedin-logo:hover,
+.toolbar #github-logo:hover {
+    opacity: 0.8;
+  }

@@ -1,0 +1,16 @@
+.example-form-field {
+    width: 200px;
+  }
+button:disabled{
+  background-color: #cfabcf;
+}
+button {
+  background-color: #390539;
+  color: white;
+}
+button:hover {
+  color:white
+}
+.btn-space {
+  margin-right: 5px;
+}

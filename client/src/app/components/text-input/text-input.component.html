@@ -1,0 +1,93 @@
+<form class="example-form">
+  <mat-form-field class="example-full-width" appearance="fill">
+    <mat-label>Value of a triangle side x </mat-label>
+    <input
+      type="number"
+      matInput
+      [formControl]="xFormControl"
+      placeholder="Ex.3"
+    />
+    <mat-error
+      *ngIf="
+        xFormControl.hasError('number') && !xFormControl.hasError('required')
+      "
+    >
+      Please enter a number
+    </mat-error>
+    <mat-error *ngIf="xFormControl.hasError('required')">
+      A numaric value is <strong>required</strong>
+    </mat-error>
+  </mat-form-field>
+</form>
+
+<form class="example-form">
+  <mat-form-field class="example-full-width" appearance="fill">
+    <mat-label>Value of a triangle side y </mat-label>
+    <input
+      type="number"
+      matInput
+      [formControl]="yFormControl"
+      placeholder="Ex.3"
+    />
+    <mat-error
+      *ngIf="
+        yFormControl.hasError('number') && !yFormControl.hasError('required')
+      "
+    >
+      Please enter a number
+    </mat-error>
+    <mat-error *ngIf="yFormControl.hasError('required')">
+      A numaric value is <strong>required</strong>
+    </mat-error>
+  </mat-form-field>
+</form>
+<form class="example-form">
+  <mat-form-field appearance="fill">
+    <mat-label>Value of a triangle side z </mat-label>
+    <input
+      type="number"
+      matInput
+      [formControl]="zFormControl"
+      placeholder="Ex.3"
+    />
+    <mat-error
+      *ngIf="
+        zFormControl.hasError('number') && !zFormControl.hasError('required')
+      "
+    >
+      Please enter a number
+    </mat-error>
+    <mat-error *ngIf="zFormControl.hasError('required')">
+      A numaric value is <strong>required</strong>
+    </mat-error>
+  </mat-form-field>
+</form>
+<p>
+  Tshe triangle has x as : {{ xFormControl.value }}, y as :
+  {{ yFormControl.value }} and z as {{ zFormControl.value }}
+</p>
+<div class="col">
+  <button
+    class="btn btn-space"
+    [disabled]="
+      xFormControl.invalid || yFormControl.invalid || zFormControl.invalid
+    "
+    mat-raised-button
+    color="primary"
+    (click)="onSubmit()"
+  >
+    Submit
+  </button>
+  <button
+    class="btn btn-space"
+    [disabled]="
+      xFormControl.invalid || yFormControl.invalid || zFormControl.invalid
+    "
+    mat-raised-button
+    color="primary"
+    (click)="onReset()"
+  >
+    Clear input
+  </button>
+</div>
+<p>The triangle is {{ value }}</p>
